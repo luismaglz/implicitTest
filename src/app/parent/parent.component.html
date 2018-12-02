@@ -1,0 +1,9 @@
+<p>
+  parent works!
+  <ng-container *ngFor="let day of days">
+    <ng-container
+      *ngTemplateOutlet="itemTemplate; context: { $implicit: day }"
+    ></ng-container>
+  </ng-container>
+  after {{ days | json }} <button (click)="addToList()">Add</button>
+</p>
